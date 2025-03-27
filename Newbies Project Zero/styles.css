@@ -1,0 +1,40 @@
+        /* Stile für die komplette Seite */
+        body {    /* ist für die komplette seite für z.b. den weisen rand zu entf. */
+            margin: 0; /* ist für den abstand */
+            font-family: "VT323", monospace;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        /* Stil für das Hintergrundbild */
+        .header-image{
+            height:     100vh; /* wird die höhe angegeben in vh*/
+            width:      100%; /* die breite aber in % */
+            object-fit: cover;
+            filter:     brightness(0.5);
+        }
+        
+        /* Stil für die Navigation */
+        .container {
+            position: absolute;
+            left: 100px;
+            top: 24px;
+            font-size: 24px;
+
+        }
+
+        /* Stil für die Menülinks */
+        .menu-link {
+            color: azure;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+        .menu-link:hover {
+            text-decoration: underline;
+        }
+        /* Stil für das Logo */
+        .logo{
+            position: absolute;
+            right: 100px;
+            top: 24px;
+        }

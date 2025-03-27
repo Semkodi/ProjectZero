@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAE 2025 - Mein Profil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hintergrundbild -->
+    <img class="header-image" src="/img/background.jpg">
+    <!-- Navigation -->
+    <div class="container">
+        <a class="menu-link" href="index.html">Start</a>
+        <a class="menu-link" href="nachrichten.html">Nachrichten</a>
+        <a class="menu-link" href="kollegen.html">Kollegen</a>
+    </div>
+    <!-- Logo -->
+    <img class="logo" src="/img/2025.png">
+    
+    <!-- Profilinhalt -->
+    <div style="position: absolute; top: 150px; left: 100px; font-size: 18px; color: white; z-index: 1; background-color: rgba(0, 0, 0, 0.5); padding: 10px; border-radius: 5px;">
+        <h2>Mein Profil</h2>
+        <img src="{{ profilbild }}" alt="Profilbild" width="200" height="200">
+        <p><strong>Name:</strong></p>
+        <p><strong>Beruf:</strong> </p>
+        <p><strong>Alter:</strong> </p>
+        <p><strong>Über mich:</strong></p>
+
+        <!-- Button zum Bearbeiten des Profils -->
+        <button id="bearbeiten-button">Profil bearbeiten</button>
+
+        <!-- Formular zum Bearbeiten des Profils (initial unsichtbar) -->
+        <div id="bearbeiten-form" style="display: none;">
+            <form action="{{ url_for('bearbeiten_profil') }}" method="POST" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="" required><br><br>
+                <label for="job">Beruf:</label>
+                <input type="text" id="job" name="job" value="" required><br><br>
+                <label for="age">Alter:</label>
+                <input type="number" id="age" name="age" value="" required><br><br>
+                <label for="about">Über mich:</label>
+                <textarea id="about" name="about" rows="4" cols="30"></textarea><br><br>
+                <label for="profilbild">Profilbild:</label>
+                <input type="file" id="profilbild" name="profilbild"><br><br>
+                <button type="submit">Speichern</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bearbeiten-button').addEventListener('click', function() {
+            var form = document.getElementById('bearbeiten-form');
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

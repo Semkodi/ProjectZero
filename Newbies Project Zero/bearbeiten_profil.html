@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAE 2025 - Profil bearbeiten</title>
+</head>
+<body>
+    <h1>Profil bearbeiten übrigens ist Cihan der coolste</h1>
+    <form action="{{ url_for('bearbeiten_profil') }}" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="Max Mustermann" required><br><br>
+        <label for="job">Beruf:</label>
+        <input type="text" id="job" name="job" value="Webentwickler" required><br><br>
+        <label for="age">Alter:</label>
+        <input type="number" id="age" name="age" value="30" required><br><br>
+        <label for="about">Über mich:</label>
+        <textarea id="about" name="about" rows="4" cols="30">Ich liebe es, Webseiten zu erstellen!</textarea><br><br>
+        <label for="profilbild">Profilbild:</label>
+        <input type="file" id="profilbild" name="profilbild"><br><br>
+        <button type="submit">Speichern</button>
+    </form>
+</body>
+</html>

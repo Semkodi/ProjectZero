@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Metadaten und Titel -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIAE 2025</title>
+    <!-- Link zur CSS-Datei -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Stile für die komplette Seite */
+        body {    /* ist für die komplette seite für z.b. den weisen rand zu entf. */
+            margin: 0; /* ist für den abstand */
+            font-family: "VT323", monospace;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        /* Stil für das Hintergrundbild */
+        .header-image{
+            height:     100vh; /* wird die höhe angegeben in vh*/
+            width:      100%; /* die breite aber in % */
+            object-fit: cover;
+            filter:     brightness(0.5);
+        }
+        
+        /* Stil für die Navigation */
+        .container {
+            position: absolute;
+            left: 100px;
+            top: 24px;
+            font-size: 24px;
+
+        }
+
+        /* Stil für die Menülinks */
+        .menu-link {
+            color: azure;
+            text-decoration: none;
+            margin-left: 16px;
+        }
+        .menu-link:hover {
+            text-decoration: underline;
+        }
+        /* Stil für das Logo */
+        .logo{
+            position: absolute;
+            right: 100px;
+            top: 24px;
+        }
+
+        /* Stil für den Haupttext */
+        .main-text {
+            position: absolute;
+            top: 150px; /* Höhe anpassen */
+            left: 100px; /* Position anpassen */
+            font-size: 18px; /* Schriftgröße anpassen */
+            color: white; /* Textfarbe auf Weiß setzen */
+            z-index: 1; /* Text über das Bild legen */
+            background-color: rgba(0, 0, 0, 0.5); /* Hintergrundtransparenz */
+            padding: 10px; /* Abstand vom Text zum Rand */
+            border-radius: 5px; /* Ecken abrunden */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hintergrundbild -->
+    <img class="header-image" src="/img/background.jpg">
+    <!-- Navigation -->
+    <div class="container">
+        <!-- Link zur Profil-Seite -->
+        <a class="menu-link" href="profil.html">Profil</a>
+        <!-- Link zur Kollegen-Seite -->
+        <a class="menu-link" href="kollegen.html">Kollegen</a>
+        <!-- Link zur Nachrichten-Seite -->
+        <a class="menu-link" href="nachrichten.html">Nachrichten</a>
+    </div>
+    <!-- Logo -->
+    <img class="logo" src="/img/2025.png">
+    
+    <!-- Haupttext -->
+    <div class="main-text">
+        <h2>Willkommen bei FIAE 2025!</h2>
+        <!-- Willkommensnachricht -->
+        <p>Hier findest du Informationen über unsere Projekte und Aktivitäten.</p>
+        <p>Wir freuen uns darauf, dich bei uns begrüßen zu können!</p>
+    </div>
+
+</body>
+</html>
+</h1>
